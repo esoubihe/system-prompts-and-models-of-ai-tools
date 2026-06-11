@@ -1,84 +1,77 @@
-# **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser & Trae AI (And other Open Sourced) System Prompts, Tools & AI Models**  
+# Casa EP — 3D Walkthrough
 
-(All the published system prompts are extracted by myself, except the already open sourced ones, Manus and Dia, which are contributions)
+An interactive, game-style 3D reconstruction of the **Casa EP** residence
+(project by DB Arquitetos / David Bastos, presentation **R01**), built from the
+floor plans on pages 2–4 of the PDF: *Pav. Térreo*, *Pav. Superior* and
+*Subsolo*, calibrated to the confirmed **40 × 35 m lot**.
 
-🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia browser & Trae AI system prompts and internal tools.**
+## How to open it
 
-📜 Over **7000+ lines** of insights into their structure and functionality.  
+**Easiest:** download **[`casa-ep-3d-tour.html`](casa-ep-3d-tour.html)** and
+double-click it. It is fully self-contained (Three.js is embedded) and works
+offline in any modern browser — no install, no server.
 
-## 📂 **Available Files**
-- **v0 Folder**  
-- **Manus Folder**
-- **Lovable Folder**
-- **Devin Folder**
-- **Same.dev Folder**
-- **Replit Folder**
-- **Windsurf Agent Folder**
-- **VSCode (Copilot) Agent Folder**
-- **Cursor Folder**
-- **Dia Folder**
-- **Trae AI Folder**
-- **Open Source prompts Folder**
-  - Codex CLI
-  - Cline
-  - Bolt
-  - RooCode
+**Dev version:** `index.html` + `vendor/` is the same app with the library kept
+as separate files. Because it uses ES-module imports it needs to be served over
+HTTP (e.g. `npx http-server` in this folder); it won't open via `file://`.
 
----
+## Controls
 
-## 🗓️ **Zero Calendar (my new project)**
+| Action | Input |
+|---|---|
+| Look around | Click the scene, then move the mouse (ESC releases) |
+| Walk | `W` `A` `S` `D` or arrow keys |
+| Run | hold `Shift` |
+| Switch floor instantly | `E` (up) / `Q` (down) — or walk the real stairs and ramps |
+| Overview / dollhouse mode | `V` or the **Overview** button |
+| Room name labels | `L` or the **Labels** button |
+| Jump to any room | **Teleport** dropdown (grouped by floor) |
+| Touch devices | left joystick = move, right joystick = look |
 
-**An Open-Source AI-Powered Calendar for the Future of Scheduling**
+In **Overview** mode you can orbit/zoom the whole property and hide the roof,
+upper floor or ground floor to peek inside like a dollhouse.
 
-Zero Calendar is an open-source AI calendar solution that gives users the power to manage their schedule intelligently while integrating with external services like Google Calendar and other calendar providers. Our goal is to modernize and improve scheduling through AI agents to truly revolutionize how we manage our time.
+## What's modeled
 
-For more details, check out the [Zero Calendar repository](https://github.com/Zero-Calendar/zero-calendar).
+The full site section as drawn: the garden/house podium sits a level above the
+street, which slopes along the south edge. From the street you can walk:
 
----
+- **up the vehicle ramp** into the covered ground-floor garage,
+- **down through the portal** into the semi-open **subsolo parking court**
+  under the garden (pilotis, slatted ceiling, the pool's basin hanging
+  through the slab),
+- or **up the garden stair** beside the ramp onto the pool deck.
 
-## 🛠 **Roadmap & Feedback**
+Rooms (as named on the plans):
 
-🚨 **Note:** We no longer use GitHub issues for roadmap and feedback.  
-Please visit [System Prompts Roadmap & Feedback](https://systemprompts.featurebase.app/) to share your suggestions and track upcoming features.
+- **Pav. Térreo:** Gourmet (open pavilion with the 10-seat round table),
+  Cozinha + Depósito/Despensa/Lavabo, Brinquedoteca, Academia, Suíte 04 +
+  Banho, Escada (walkable U-stair up + flight down), Sala de Jantar,
+  Sala de Estar, Garagem, Piscina + deck and courtyard garden
+- **Pav. Superior:** Offices 01/02, Estar Íntimo (overlooking the
+  double-height gourmet void), louvred south gallery, Suíte 03 + Banho/Closet,
+  Home, Suítes 01/02 + Banhos/Closets, and the **master block cantilevering
+  over the pool deck**: Suíte Master, Closets Master 01/02, Banho Master,
+  with the wood-slat band and cascading planter from the façade renders
+- **Subsolo:** parking court, Garagem (enclosed), Dormitórios + Banhos de
+  Serviço, Estar Serviço, Área de Serviço, Depósitos, Área Técnica
 
-🆕 **LATEST UPDATE:** 15/05/2025 
+All walking routes (stairs between the three levels, both street ramps, the
+garden stair) are verified walkable by automated tests.
 
-## ❤️ Support the Project
+## Photoreal renders (Blender / Cycles)
 
-If you find this collection valuable and appreciate the effort involved in obtaining and sharing these insights, please consider supporting the project. Your contribution helps keep this resource updated and allows for further exploration.
+`blender/casa_ep.py` path-traces realistic images of the same project
+(output in [`renders/`](renders/)). **Note:** these renders are from an
+earlier iteration with smaller proportions — they predate the 40×35 m
+calibration and the street/ramp modeling, and will be regenerated.
 
-You can show your support via:
+## Caveats
 
-*   **PayPal:** `lucknitelol@proton.me`
-*   **Cryptocurrency:**
-    *   **BTC:** `bc1q7zldmzjwspnaa48udvelwe6k3fef7xrrhg5625`
-    *   **LTC:** `LRWgqwEYDwqau1WeiTs6Mjg85NJ7m3fsdQ`
-
-Thank you for your support! 🙏
-
-
-## 🔗 **Connect With Me**  
-✖ **X:** [NotLucknite](https://x.com/NotLucknite)  
-💬 **Discord:** `x1xh`  
-
-## 🛡️ **Security Notice for AI Startups***
-
-⚠️ **If you're an AI startup, make sure your data is secure.** Exposed prompts or AI models can easily become a target for hackers.
-
-🔐 **Interested in securing your AI systems?**  
-Check out **[ZeroLeaks](https://0leaks.vercel.app)**, a service designed to help startups **identify and secure** leaks in system instructions, internal tools, and model configurations. **Get a free AI security audit** to ensure your AI is protected from vulnerabilities.
-
-
-**The company is mine, this is NOT a 3rd party AD.*
-
-## 📊 **Star History**
-
-<a href="https://www.star-history.com/#x1xhlol/system-prompts-and-models-of-ai-tools&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date" />
- </picture>
-</a>
-
-⭐ **Drop a star if you find this useful!**
+This is a visualization aid, not a CAD model. The lot, levels, room layout and
+adjacencies follow the drawings at the calibrated scale; wall positions are
+read from the presentation plans (±20 cm) and finishes/furniture are
+indicative. Some printed area labels in the PDF disagree with the drawn
+geometry (they appear to be from an earlier revision); the drawing was taken
+as the source of truth. Use the architect's documentation for anything
+dimensional.
