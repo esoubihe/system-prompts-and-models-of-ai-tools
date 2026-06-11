@@ -51,6 +51,29 @@ wood-slat / travertine / stone material palette from the architect's renders.
 - **Subsolo:** Dormitórios + Banhos de Serviço, Estar Serviço, Área de Serviço,
   Depósitos, Garagem (3 vagas), Área Técnica
 
+## Photoreal renders (Blender / Cycles)
+
+`blender/casa_ep.py` rebuilds the same house in Blender and path-traces
+realistic images — cutaway **3D floor plans** of each level plus exterior and
+interior views (output in [`renders/`](renders/)):
+
+| Ground floor | Upper floor |
+|---|---|
+| ![plan ground](renders/plan_ground.png) | ![plan upper](renders/plan_upper.png) |
+
+| Aerial | Pool courtyard | Gourmet |
+|---|---|---|
+| ![aerial](renders/aerial.png) | ![exterior](renders/exterior_pool.png) | ![gourmet](renders/int_gourmet.png) |
+
+Re-render with:
+
+```bash
+pip install bpy            # Blender as a Python module (or use the blender CLI)
+python3 -c "import sys; sys.argv=['b','--','plan_ground']; exec(open('blender/casa_ep.py').read())"
+# modes: plan_ground · plan_upper · plan_basement · exterior_pool · aerial ·
+#        int_gourmet · int_estar · int_master   (append 'quick' for a fast draft)
+```
+
 ## Caveats
 
 This is a visualization aid, not a CAD model. Room positions, adjacencies and
